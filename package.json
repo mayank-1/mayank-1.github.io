@@ -13,5 +13,13 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.10.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayank-1/mayank-1.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mayank-1/mayank-1.github.io/issues"
   }
 }
