@@ -69,7 +69,7 @@
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url("../img/portrait.jpg");
+  background: url("../img/mayank_logo.jpg");
   border-radius: 50%;
   border: solid 3px #eece1a;
 }
@@ -207,7 +207,11 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
+  width: 250px;
+  background-repeat: no-repeat;
+  height: 250px;
   border: #eece1a 3px solid;
+  background-position: center center;
 }
 .about-info .bio {
   grid-area: bio;
