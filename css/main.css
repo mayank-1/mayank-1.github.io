@@ -356,6 +356,7 @@ main#home h1 {
     background: url("../img/mayank_logo.png");
     width: 150px;
     height: 150px;
+    background-position: center center;
   }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
