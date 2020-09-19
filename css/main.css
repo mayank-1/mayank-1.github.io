@@ -353,10 +353,9 @@ main#home h1 {
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url("../img/mayank_logo.png");
+    background: url("../img/mayank_logo_150.png");
     width: 150px;
     height: 150px;
-    background-position: center center;
   }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
