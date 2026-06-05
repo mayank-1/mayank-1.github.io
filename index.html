@@ -3,165 +3,581 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mayank Kumar — Senior Software Engineer</title>
+    <meta name="description" content="Mayank Kumar — Senior Software Engineer with 5+ years of experience building scalable web and mobile applications. Expert in React, Next.js, Redux, and Micro-frontend architecture." />
+    <meta name="keywords" content="Mayank Kumar, Software Engineer, React Developer, Next.js, Frontend Engineer, Portfolio" />
+    <meta name="author" content="Mayank Kumar" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mayank Kumar — Senior Software Engineer" />
+    <meta property="og:description" content="Senior Software Engineer with 5+ years building scalable web and mobile applications." />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favIMG/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favIMG/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favIMG/favicon-16x16.png" />
+    <meta name="theme-color" content="#0a0a0f" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <title>Hi there!</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="img/favIMG/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="img/favIMG/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="img/favIMG/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="img/favIMG/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="img/favIMG/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="img/favIMG/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="img/favIMG/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="img/favIMG/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/favIMG/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="img/favIMG/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favIMG/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="img/favIMG/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favIMG/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="img/favIMG/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body id="bg-img">
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+  <body>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-logo">
+        mk<span class="cursor-blink"></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-content">
+        <p class="hero-greeting">
+          <span class="wave">👋🏻</span> Hey there, I'm
+        </p>
+        <h1 class="hero-name">
+          <span class="gradient-text">Mayank Kumar</span>
+        </h1>
+        <p class="hero-title">
+          <span id="typed-text"></span><span class="typed-cursor"></span>
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">💻 Software Engineer</span>
+          <span class="hero-tag">🚴🏻‍♂️ Cyclist</span>
+          <span class="hero-tag">🎥 Tech YouTuber</span>
+          <span class="hero-tag">🌏 Lifestyle Vlogger</span>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/mayankcodes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/mayank-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/mayankcodes" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/way2tech" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://stackoverflow.com/users/12324597/mayank-kumar" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+        scroll
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section-header reveal">
+        <span class="section-label">// who am i</span>
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <div class="section-divider"></div>
       </div>
 
-      <nav class="menu">
-        <div class="menu-branding"><div class="portrait"></div></div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link"> Home </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link"> About Me </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link"> My Work </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"> How to Reach Me </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main id="home">
-      <h1 class="lg-heading">
-        Mayank <span class="text-secondary">Kumar</span>
-      </h1>
-      <h2 class="sm-heading">Software Engineer 👨🏻‍💻, Cyclist 🚴🏻‍♂️, Tech YouTuber 🎥 & LifeStyle Vlogger 🌏</h2>
-      <div class="icons">
-        <a
-          href="https://twitter.com/mayankcodes"
-          target="_blank"
-          alt="twitter"
-        >
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a
-          href="https://www.facebook.com/mayankkumar25"
-          target="_blank"
-          alt="Facebook"
-        >
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mayank-1"
-          target="_blank"
-          alt="LinkedIn"
-        >
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/mayank-1" target="_blank" alt="Github">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a
-          href="https://www.youtube.com/way2tech"
-          target="_blank"
-          alt="YouTube"
-        >
-          <i class="fab fa-youtube fa-2x"></i>
-        </a>
-        <a
-          href="https://stackoverflow.com/users/12324597/mayank-kumar"
-          target="_blank"
-          alt="StackOverflow"
-        >
-          <i class="fab fa-stack-overflow fa-2x"></i>
-        </a>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <img src="img/mayank_logo.png" alt="Mayank Kumar" class="about-image" />
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <h3>Crafting <span style="color: var(--accent-cyan);">digital experiences</span> that matter.</h3>
+          <p>
+            I'm Mayank Kumar, a Senior Software Engineer based in Bengaluru, India with 5+ years of experience engineering scalable web and mobile applications. I specialize in React, Next.js, and micro-frontend architectures, building high-performance user experiences for E-commerce and B2B platforms.
+          </p>
+          <p>
+            Beyond code, I run a tech channel on YouTube, love cycling through the city, and capture life through my vlogs. I believe in building products that people love to use and teams that love to build.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience" style="background: var(--bg-secondary);">
+      <div class="section-header reveal">
+        <span class="section-label">// where i've worked</span>
+        <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- Wissen Technology -->
+        <div class="timeline-item current reveal">
+          <span class="timeline-date">Feb 2025 — Present</span>
+          <div class="timeline-card">
+            <h3>Wissen Technology, Bengaluru <span class="current-badge">Current</span></h3>
+            <p class="role">Senior Software Engineer</p>
+            <ul>
+              <li>Working for a Fortune 500 Banking Sector client</li>
+              <li>Leading the team, implementing features, reviewing code and deploying to production</li>
+              <li>Architecting and building on Micro-frontend architecture</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- One Impression -->
+        <div class="timeline-item reveal">
+          <span class="timeline-date">Feb 2022 — Aug 2024</span>
+          <div class="timeline-card">
+            <h3>One Impression, Gurugram</h3>
+            <p class="role">Software Engineer</p>
+            <ul>
+              <li>Led the development of multiple platforms, scaling them from $100K to $10M Series-A</li>
+              <li>Developed an affiliate tool in partnership with Meesho, driving 20% increase in user adoption</li>
+              <li>Created an influencer marketing campaign platform with ShipRocket</li>
+              <li>Improved web responsiveness by 30% with custom-built components</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pixacore -->
+        <div class="timeline-item reveal">
+          <span class="timeline-date">Mar 2020 — Jan 2022</span>
+          <div class="timeline-card">
+            <h3>Pixacore (Invenio), Mumbai</h3>
+            <p class="role">Software Engineer</p>
+            <ul>
+              <li>Worked for e-commerce client The Children's Place (NASDAQ: PLCE) across USA and Canada</li>
+              <li>Designed recommendation systems and A/B testing frameworks, boosting engagement by 25%</li>
+              <li>Built "Shop By Profile" feature based on interest, hobby, gender, age — increasing sales by 20%</li>
+              <li>Improved SEO by 25% and web app performance by 15% using React, Next.js, and Redux</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Earlier Roles -->
+        <div class="timeline-item reveal">
+          <span class="timeline-date">2018 — 2020</span>
+          <div class="timeline-card">
+            <h3>Early Career</h3>
+            <p class="role">Software Developer Trainee → Associate Software Engineer</p>
+            <ul>
+              <li><strong>Pixacore</strong> — Associate Full Stack Developer, building frontend and backend modules</li>
+              <li><strong>Svaapta It-Ally Solutions</strong> — Developed native iOS apps (Objective-C), hybrid mobile apps, and Amazon Alexa Skills using AWS Lambda & Node.js</li>
+              <li><strong>Sannibh Technologies</strong> — Built a CMS blog portal using PHP, MySQL, HTML5, CSS & Bootstrap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="education-card reveal">
+        <div class="education-icon">🎓</div>
+        <div class="education-details">
+          <h3>Gujarat Technological University, Vadodara</h3>
+          <p>Bachelor of Engineering — Computer Engineering</p>
+          <span class="edu-meta">CGPA: 8.62 &nbsp;|&nbsp; 2014 – 2018</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="section-header reveal">
+        <span class="section-label">// what i know</span>
+        <h2 class="section-title">Skills & <span class="highlight">Technologies</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-category-icon">⚡</div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-icon">🧩</div>
+          <h3>Frameworks & Libraries</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Redux</span>
+            <span class="skill-tag">Lit Elements</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">React-Table</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-icon">🏗️</div>
+          <h3>Architecture & Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Micro-frontends</span>
+            <span class="skill-tag">View-Container</span>
+            <span class="skill-tag">React Hooks</span>
+            <span class="skill-tag">Context API</span>
+            <span class="skill-tag">Redux-Thunk</span>
+            <span class="skill-tag">Web Accessibility</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category-icon">🎨</div>
+          <h3>UI, Styling & Visualization</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SCSS</span>
+            <span class="skill-tag">Storybook</span>
+            <span class="skill-tag">Vega-Lite</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-icon">🛠️</div>
+          <h3>Build Tools & DevOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Webpack</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">npm</span>
+            <span class="skill-tag">yarn</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Agile</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-icon">🧪</div>
+          <h3>Testing</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Jest</span>
+            <span class="skill-tag">Cypress</span>
+            <span class="skill-tag">Code Review</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="section-header reveal">
+        <span class="section-label">// what i've built</span>
+        <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Web Apps -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/trello.png" alt="Trello App" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Trello Clone</h3>
+            <p class="project-tech">React • Redux • Drag & Drop</p>
+            <div class="project-card-links">
+              <a href="https://trello-live.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+              <a href="https://github.com/mayank-1/Trello-App" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/weather_app.png" alt="Weather App" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Weather App</h3>
+            <p class="project-tech">React • Hooks • API Integration</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/Weather-Client-App" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a href="https://github.com/mayank-1/Weather-Client-App" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/react-todo.png" alt="React Todo" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>React Todo App</h3>
+            <p class="project-tech">React • State Management</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/React-Todo-App" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a href="https://github.com/mayank-1/React-Todo-App" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/logo.png" alt="Fooder" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Fooder — Swiggy Clone</h3>
+            <p class="project-tech">Node.js • Express • REST API</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/Fooder" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a href="https://github.com/mayank-1/Fooder" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/guestmash.png" alt="GuestMash" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>GuestMash</h3>
+            <p class="project-tech">Node.js • Full Stack</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/GuestMash" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a href="https://github.com/mayank-1/GuestMash" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/adminPanel.PNG" alt="Admin Panel" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Admin Panel</h3>
+            <p class="project-tech">Angular 8 • Dashboard</p>
+            <div class="project-card-links">
+              <a href="https://mayank-angular-adminpanel.netlify.com/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+              <a href="https://github.com/mayank-1/Angular-Admin" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/blogportal.jpg" alt="Blog Portal" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Blog Portal</h3>
+            <p class="project-tech">PHP • MySQL • Bootstrap</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/Blog-Portal" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/coolapp.PNG" alt="Cool App" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Cool App</h3>
+            <p class="project-tech">Angular 8 • SPA</p>
+            <div class="project-card-links">
+              <a href="https://mayank-angular-001.netlify.com/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+              <a href="https://github.com/mayank-1/Angular-Cool-App" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/stayfitlogo.jpg" alt="StayFit Bharat" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>StayFit Bharat</h3>
+            <p class="project-tech">React Native • Fitness App</p>
+            <div class="project-card-links">
+              <a href="https://play.google.com/store/apps/details?id=com.stayfit.app.stayfitBharat&hl=en_IN" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fab fa-google-play"></i> Play Store
+              </a>
+              <a href="https://github.com/mayank-1/StayFit" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/sateek.jpg" alt="Sateek" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Sateek — Tech News Hub</h3>
+            <p class="project-tech">React Native • News Aggregator</p>
+            <div class="project-card-links">
+              <a href="https://play.google.com/store/apps/details?id=in.appalanche.sateeknews&hl=en_IN" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                <i class="fab fa-google-play"></i> Play Store
+              </a>
+              <a href="https://github.com/mayank-1/Sateek" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/trackback.gif" alt="TrackBack" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>TrackBack</h3>
+            <p class="project-tech">Android • Java • GPS Tracker</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/TrackBack" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-card-image-wrapper">
+            <img src="img/projects/courtCounter.png" alt="Court Counter" class="project-card-image" />
+          </div>
+          <div class="project-card-body">
+            <h3>Court Counter</h3>
+            <p class="project-tech">Android • Java • Sports App</p>
+            <div class="project-card-links">
+              <a href="https://github.com/mayank-1/CourtCounter" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="section-header reveal">
+        <span class="section-label">// let's connect</span>
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's build something <span style="color: var(--accent-cyan);">awesome</span> together.</h3>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you want to talk tech, collaborate on a project, or just say hi — feel free to reach out!
+          </p>
+          <div class="contact-details">
+            <a href="mailto:er.mayankkumar25@gmail.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>er.mayankkumar25@gmail.com</span>
+            </a>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Bengaluru, India</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="contact-socials reveal reveal-delay-1">
+          <h3>Find me on</h3>
+          <div class="social-links-grid">
+            <a href="https://www.linkedin.com/in/mayankcodes" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/mayank-1" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://twitter.com/mayankcodes" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-x-twitter"></i> Twitter
+            </a>
+            <a href="https://www.youtube.com/way2tech" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-youtube"></i> Way2Tech
+            </a>
+            <a href="https://www.instagram.com/mayankcodes" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://stackoverflow.com/users/12324597/mayank-kumar" target="_blank" rel="noopener noreferrer" class="social-card">
+              <i class="fab fa-stack-overflow"></i> StackOverflow
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p>Designed & Built by Mayank Kumar &nbsp;<span class="heart">♥</span></p>
+      <p style="margin-top: 0.25rem;">© <script>document.write(new Date().getFullYear());</script> — All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
   </body>
 </html>
